@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .main-container {
+            display: flex;
+            width: 800px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .illustration {
+            background-color: #e6f7e9;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .illustration_1{
+            display: none;
+        }
+        .illustration img {
+            max-width: 100%;
+            height: auto;
+        }
+        .signup-container {
+            background-color: #fff;
+            padding: 40px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .signup-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        .signup-container input[type="text"],
+        .signup-container input[type="email"],
+        .signup-container input[type="password"] {
+            width: calc(100% - 10px);
+            padding: 2px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 16px;
+            background-repeat: no-repeat;
+            outline: none;
+            background-position: 8px center;
+        }
+       
+        form button {
+            background-color: #73895d;
+            color: white;
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            padding:10px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .signup-container button:hover {
+            background-color: #45a049;
+        }
+        .signup-container .social-signup {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+      .img {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .signup-container .login-link {
+            margin-top: 20px;
+            display: block;
+            color: #666;
+            text-decoration: none;
+        }
+        .signup-container .login-link:hover {
+            text-decoration: underline;
+        }
+        .google-icon::before {
+            content: "\f1a0"; 
+            font-family: "Font Awesome 5 Brands"; 
+        }
+        .facebook-icon::before {
+            content: "\f39e"; 
+            font-family: "Font Awesome 5 Brands"; 
+        }
+        .apple-icon::before {
+            content: "\f179";
+            font-family: "Font Awesome 5 Brands"; 
+        }
+        .or{
+            text-align: center;
+            color: #666;
+            padding: 10px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .input-wrap{
+            margin: 10px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+
+        }
+        input{
+            border: none;
+        }
+        
+        .social-signup img{
+            height: 30px;  
+        }
+        .social-signup{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .logo-container h1 {
+            font-size: 24px;
+            margin: 0;
+            color: #333;
+        }
+        .logo-container_1{
+            display: none;
+        }
+        @media screen and (max-width: 600px) {
+            .illustration{
+                width: 100%;
+            }
+            .illustration img{
+                object-fit: contain;
+            }
+            .main-container {
+                width: 100%;
+                flex-direction:column;
+            }
+            .signup-container {
+                width: 100%;
+            }
+            input{
+                width: 100%;
+            }
+            form{
+                margin: 10px;
+                width: 70%;
+                text-align: center;
+            }
+            .lower{
+                width: 70%;
+            }
+            .logo-container_1{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+            .logo-container{
+                display: none;
+            }
+            .logo-container_1 img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .logo-container_1 h1 {
+            font-size: 24px;
+            margin: 0;
+            color: #333;
+        }
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="main-container">
+        <div class="logo-container_1">
+            <img src="leaf.png"
+                alt="Leaf">
+            <h1>Leaf</h1>
+        </div>
+        <div class="illustration">
+            <img src="Image.png" alt="Illustration">
+        </div>
+        <div class="signup-container">
+            <div class="logo-container">
+                <img src="leaf.png"
+                    alt="Leaf">
+                <h1>Leaf</h1>
+            </div>
+            <h2>Create Account</h2>
+            <form>
+                <div class="input-wrap">
+                    <div class="img"><i class="fas fa-user"></i></div>
+                    <input type="text" name="full_name" placeholder="Enter Full Name" required>
+                </div>
+                <div class="input-wrap">
+                    <div class="img"><i class="fas fa-envelope"></i></div>
+                    <input type="email" name="email" placeholder="Enter Your Email" required>
+                </div>
+                <div class="input-wrap">
+                    <div class="img"><i class="fas fa-lock"></i></div>
+                    <input type="password" name="password" placeholder="Enter Your Password" required>
+                </div>
+                <button type="submit">Sign-Up</button>
+            </form>
+            <div class="lower">
+            <h3 class="or">-OR-</h3>
+            <div class="social-signup">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.735156" y="0.7" width="30.6" height="30.6" rx="15.3" stroke="black" stroke-opacity="0.2"
+                        stroke-width="0.6" />
+                    <g opacity="0.9" clip-path="url(#clip0_1_965)">
+                        <path
+                            d="M16.0349 14.3636V17.8491H20.8785C20.6658 18.97 20.0276 19.9191 19.0703 20.5573L21.9912 22.8237C23.693 21.2528 24.6749 18.9455 24.6749 16.2046C24.6749 15.5665 24.6176 14.9528 24.5112 14.3637L16.0349 14.3636Z"
+                            fill="#4285F4" />
+                        <path
+                            d="M10.9911 17.713L10.3323 18.2173L8.00049 20.0336C9.48139 22.9709 12.5166 25 16.0348 25C18.4647 25 20.502 24.1982 21.9911 22.8237L19.0702 20.5573C18.2684 21.0973 17.2456 21.4246 16.0348 21.4246C13.6948 21.4246 11.7067 19.8455 10.9948 17.7182L10.9911 17.713Z"
+                            fill="#34A853" />
+                        <path
+                            d="M8.00054 11.9663C7.38694 13.1772 7.03516 14.5436 7.03516 15.9999C7.03516 17.4562 7.38694 18.8226 8.00054 20.0335C8.00054 20.0416 10.9951 17.7098 10.9951 17.7098C10.8151 17.1698 10.7087 16.5971 10.7087 15.9998C10.7087 15.4024 10.8151 14.8298 10.9951 14.2898L8.00054 11.9663Z"
+                            fill="#FBBC05" />
+                        <path
+                            d="M16.035 10.5836C17.3604 10.5836 18.5386 11.0418 19.4795 11.9255L22.0568 9.34821C20.494 7.89187 18.465 7 16.035 7C12.5168 7 9.48139 9.02091 8.00049 11.9664L10.995 14.29C11.7068 12.1627 13.695 10.5836 16.035 10.5836Z"
+                            fill="#EA4335" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_1_965">
+                            <rect width="18" height="18" fill="white" transform="translate(7.03516 7)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <img src="facebook.png" alt="Facebook">
+                <img src="apple.png" alt="Apple">
+            </div>
+            <a href="#" class="login-link">Already have an account? Login</a>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
